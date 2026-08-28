@@ -31,7 +31,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
-.env
 
 # vercel
 .vercel
@@ -68,7 +67,6 @@ components/emails/marketing
 lib/emails/marketing
 
 # vscode configs
-.vscode
 
 # trigger.dev
 .trigger
@@ -82,3 +80,4 @@ _public/
 
 .opencode
 plans/
+config.bat

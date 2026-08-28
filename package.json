@@ -6,9 +6,9 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
     "vercel-build": "prisma migrate deploy && next build",
@@ -17,7 +17,7 @@
     "trigger:v4:deploy": "npx trigger.dev@4 deploy",
     "stripe:webhook": "pkgx stripe listen --forward-to localhost:3000/api/stripe/webhook",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx}\"",
-    "dev:prisma": "npx prisma generate && npx prisma migrate deploy",
+    "dev:prisma": "node init && npx prisma generate && npx prisma migrate deploy",
     "generate:openapi": "tsx scripts/generate-openapi.ts"
   },
   "dependencies": {
